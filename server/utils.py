@@ -127,7 +127,7 @@ appliances = [
         "osVersion": "6.1.0"
     },
     {
-        "serialNo": "JTD-345678",
+        "serialNo": "JTD-345633",
         "theatreName": "Majestic Movies",
         "location": {
             "city": "Lucknow",
@@ -376,8 +376,8 @@ appliance_info = {
         "osVersion": "6.1.0",
         "storage": "1.5 TB"
     },
-    "JTD-345678": {
-        "serialNo": "JTD-345678",
+    "JTD-345633": {
+        "serialNo": "JTD-345633",
         "theatreName": "Majestic Movies",
         "location": {
             "city": "Lucknow",

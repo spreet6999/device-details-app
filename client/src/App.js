@@ -1,17 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 //* Import components
 import AppRoutes from "./routes/AppRoutes";
+import Navbar from "./pages/components/Navbar";
 
 const App = () => {
   return (
     <Router>
-      <div className="container mx-auto px-4">
+      <div className="mx-auto">
         {/* Navigation bar */}
-        <nav>
-          <Link to="/">All Appliances</Link>
-        </nav>
+        <Navbar />
 
         <AppRoutes />
       </div>
