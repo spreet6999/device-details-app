@@ -26,7 +26,7 @@ The backend of this application is developed using Python 3 and Flask, along wit
    ```bash
    pip install -r requirements.txt
    ```
-5. Install the required dependencies:
+5. Run the server:
    ```bash
    python3 app.py
    ```
