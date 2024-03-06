@@ -6,12 +6,14 @@ import axios from "axios";
 
 function AppRoutes() {
   const [appliances, setAppliances] = useState([]);
+  const [metadata, setMetadata] = useState({});
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
         "http://localhost:5000/api/v1/appliances"
       );
       setAppliances(response.data.appliances);
+      setMetadata(response.data.metadata);
     };
 
     fetchData();
@@ -19,8 +21,15 @@ function AppRoutes() {
 
   return (
     <Routes>
-      <Route path="/" element={<HomePage appliances={appliances} />} />
-      <Route path="/appliance/:applianceId/info" element={<ApplianceInfo />} />
+      <Route
+        path="/"
+        element={<HomePage appliances={appliances} metadata={metadata} />}
+      />
+      <Route
+        path="/appliances"
+        element={<HomePage appliances={appliances} metadata={metadata} />}
+      />
+      <Route path="/appliances/:applianceId" element={<ApplianceInfo />} />
     </Routes>
   );
 }

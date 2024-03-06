@@ -1,6 +1,6 @@
 import { Button } from "@material-tailwind/react";
 import CompositeTableCell from "./components/CompositeTableCell";
-import Chip from "../components/Chip";
+import Chip from "../../components/Chip/Chip";
 import { chipValueToVariantMapping } from "../../utils/constants";
 
 export const ACCESSOR_TYPES = {
