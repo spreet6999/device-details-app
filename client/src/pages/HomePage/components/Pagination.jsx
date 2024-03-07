@@ -11,7 +11,7 @@ function Pagination({ paginationProps }) {
     <div className="flex justify-center align-items-center">
       {/* Dropdown to select items per page */}
       <select
-        className="px-3 mx-4 rounded"
+        className="px-3 mr-4 rounded"
         value={paginationProps.itemsPerPage}
         onChange={handleItemsPerPageChange}
       >

@@ -26,10 +26,10 @@ function AppliancesTable({
   return (
     <React.Fragment>
       <Card className="h-full w-full rounded-md overflow-scroll">
-        <div className="w-full flex justify-between p-3">
+        <div className="w-full flex flex-wrap justify-between p-3">
           {/* Search bar */}
-          <section className="w-[50%] flex">
-            <div className="flex w-[80%]">
+          <section className="flex flex-grow-[2]">
+            <div className="flex w-[70%]">
               <input
                 type="text"
                 placeholder="Search..."
