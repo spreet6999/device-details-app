@@ -5,6 +5,9 @@ import HomePage from "../pages/HomePage/HomePage";
 import NotFoundPage from "../pages/NotFound/NotFound.jsx"; // Import your Page Not Found component
 import axios from "axios";
 
+const BASE_URL =
+  process.env.REACT_APP_API_BASE_URL || "http://localhost:5000/api/v1";
+
 function AppRoutes() {
   const [appliances, setAppliances] = useState([]);
   const [metadata, setMetadata] = useState({});
@@ -13,9 +16,7 @@ function AppRoutes() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:5000/api/v1/appliances"
-        );
+        const response = await axios.get(`${BASE_URL}/appliances`);
         setAppliances(response.data.appliances);
         setMetadata(response.data.metadata);
       } catch (error) {
@@ -29,7 +30,7 @@ function AppRoutes() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>; // You might want to show a loading indicator while fetching data
+    return <div>Loading...</div>;
   }
 
   return (

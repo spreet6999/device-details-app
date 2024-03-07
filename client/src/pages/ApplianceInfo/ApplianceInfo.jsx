@@ -9,6 +9,9 @@ import {
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
+const BASE_URL =
+  process.env.REACT_APP_API_BASE_URL || "http://localhost:5000/api/v1";
+
 export const ApplicationCard = ({ applianceInfo }) => {
   return (
     <>
@@ -39,7 +42,7 @@ const ApplianceInfo = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `http://localhost:5000/api/v1/appliance/${applianceId}/info`
+        `${BASE_URL}/appliance/${applianceId}/info`
       );
       setApplianceInfo(response.data);
     };
