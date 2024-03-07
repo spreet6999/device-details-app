@@ -71,8 +71,9 @@ export const APPLIANCE_TABLE_COLUMNS = [
     formatCell: function ({ rowData = {} }) {
       return (
         <Chip
-          variant={chipValueToVariantMapping[rowData?.deviceStatus]}
+          type={chipValueToVariantMapping[rowData?.deviceStatus]}
           label={rowData?.deviceStatus}
+          showIcon
         />
       );
     },
@@ -87,8 +88,9 @@ export const APPLIANCE_TABLE_COLUMNS = [
     formatCell: function ({ rowData = {} }) {
       return (
         <Chip
-          variant={chipValueToVariantMapping[rowData?.downloadStatus]}
+          type={chipValueToVariantMapping[rowData?.downloadStatus]}
           label={rowData?.downloadStatus}
+          showIcon
         />
       );
     },

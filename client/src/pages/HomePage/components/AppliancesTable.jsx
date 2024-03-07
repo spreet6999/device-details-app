@@ -1,11 +1,13 @@
 import React from "react";
 import { Card, Typography } from "@material-tailwind/react";
+
+//* Import components/utils
 import { ACCESSOR_TYPES } from "../utils";
 import Pagination from "./Pagination";
 
 function AppliancesTable({
   columns = [],
-  data = [],
+  // data = [],
   isPaginationEnabled = false,
   paginationProps = {
     paginatedData: [],
@@ -23,7 +25,7 @@ function AppliancesTable({
 }) {
   return (
     <React.Fragment>
-      <Card className="h-full w-full rounded-sm overflow-scroll">
+      <Card className="h-full w-full rounded-md overflow-scroll">
         <div className="w-full flex justify-between p-3">
           {/* Search bar */}
           <section className="w-[50%] flex">
@@ -99,8 +101,8 @@ function AppliancesTable({
                     const isLast =
                       index === paginationProps?.paginatedData?.length - 1;
                     const classes = isLast
-                      ? "p-4 border-b "
-                      : "p-4 border-blue-gray-50";
+                      ? "p-4"
+                      : "p-4 border-b border-blue-gray-50";
 
                     return (
                       <tr key={index}>

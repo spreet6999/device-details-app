@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+//* Import components/utils
 import { APPLIANCE_TABLE_COLUMNS } from "./utils";
 import DownloadStatuses from "./components/DownloadStatuses";
 import AppliancesTable from "./components/AppliancesTable";
@@ -72,7 +73,7 @@ function HomePage({ appliances = [], metadata = {} }) {
   };
 
   return (
-    <div className="flex-col space-y-4 p-4 h-[calc(100vh-13rem)] w-full">
+    <div className="flex-col space-y-4 p-4 h-[calc(100vh-9rem)] w-full">
       <DownloadStatuses downloadStatuses={metadata?.download_status_counts} />
       <AppliancesTable
         columns={APPLIANCE_TABLE_COLUMNS}

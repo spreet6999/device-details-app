@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "@material-tailwind/react";
 
+//* Import components/utils
 import Chip from "../../../components/Chip/Chip";
 import { chipValueToVariantMapping } from "../../../utils/constants";
 
@@ -11,8 +12,9 @@ function DownloadStatuses({ downloadStatuses = {} }) {
         <Chip
           key={downloadStatusPair[0]}
           className="flex-1"
-          variant={chipValueToVariantMapping[downloadStatusPair[0]]}
+          type={chipValueToVariantMapping[downloadStatusPair[0]]}
           label={`${downloadStatusPair[1]} ${downloadStatusPair[0]}`}
+          showIcon
         />
       ))}
     </Card>

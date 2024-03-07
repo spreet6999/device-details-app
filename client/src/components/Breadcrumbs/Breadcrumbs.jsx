@@ -3,6 +3,8 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { Link as RouterLink, useLocation } from "react-router-dom";
+
+//* Import components/utils
 import { splitUrlToBreadcrumbData } from "./utils";
 
 function LinkRouter(props) {
