@@ -40,7 +40,13 @@ The frontend of this application is developed using Create React App, React libr
 
 1. Navigate to the `client` directory.
 2. Make sure you have Node.js version 20 installed on your system.
-3. Run the following commands:
+3. Configure the environment variables - To use the this project, you will need to set up some environment variables on your development machine
+   - Create a **`.env`** file in the root of the project.
+   - Add the following variables to the **`.env`** file, replacing the placeholder values with your own:
+   ```jsx
+     REACT_APP_BASE_URL="http://localhost:5000/api/v1"
+     ```
+4. Run the following commands:
    ```bash
    npm install # Install dependencies
    npm start   # Start the development server
