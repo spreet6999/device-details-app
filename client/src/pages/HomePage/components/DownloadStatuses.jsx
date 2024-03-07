@@ -6,7 +6,7 @@ import { chipValueToVariantMapping } from "../../../utils/constants";
 
 function DownloadStatuses({ downloadStatuses = {} }) {
   return (
-    <Card className="flex-row gap-2 flex-wrap w-full rounded-md p-2">
+    <Card className="flex-row gap-2 flex-wrap w-full rounded-md p-3">
       {Object.entries(downloadStatuses).map((downloadStatusPair) => (
         <Chip
           key={downloadStatusPair[0]}
